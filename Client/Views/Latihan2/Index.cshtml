@@ -1,0 +1,146 @@
+﻿
+@{
+    Layout = null;
+    Layout = "_LayoutLatihan";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>No</td>
+                    <td>Name</td>
+                    <td>URL</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody id="tablePoke">
+            </tbody>
+        </table>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                            <h3 class="modal-title" id="">Character Profiles</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="urlPoke">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-4 text-left">
+                                    <div class="card" id="cl3">
+                                        <div class="card" id="cl3">
+                                            <label class="text-center mt-3">Stats</label>
+                                            <div class="progress m-2">
+                                                <div class="progress-bar bg-success text-left" role="progressbar" id="hpStat" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                            </div>
+                                            <div class="progress m-2">
+                                                <div class="progress-bar bg-danger text-left" role="progressbar" id="attStat" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                            </div>
+                                            <div class="progress m-2">
+                                                <div class="progress-bar bg-warning text-left" role="progressbar" id="defStat" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                            </div>
+                                            <div class="progress m-2">
+                                                <div class="progress-bar bg-danger text-left" role="progressbar" id="specAttStat" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                            </div>
+                                            <div class="progress m-2">
+                                                <div class="progress-bar bg-warning text-left" role="progressbar" id="specDefStat" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                            </div>
+                                            <div class="progress m-2">
+                                                <div class="progress-bar progress-bar-striped text-left" role="progressbar" id="speedStat" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                            </div>
+                                            <label class="text-center mt-3">Common Info</label>
+                                            <div class="row ml-3">
+                                                <button type="button" class="btn btn-primary m-2 col-sm-5">
+                                                    Weight <span class="badge badge-light " id="valWeight"></span>
+                                                </button>
+                                                <button type="button" class="btn btn-primary col-sm-5 m-2">
+                                                    Height <span class="badge badge-light" id="valHeight"></span>
+                                                </button>
+                                            </div>
+                                            <div class="row ml-3">
+                                                <button type="button" class="btn btn-outline-primary m-2 col-sm-5 text-dark" id="grassType">
+                                                </button>
+                                                <button type="button" class="btn btn-outline-primary col-sm-5 m-2 text-dark" id="poisonType">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 text-center rounded-pill">
+                                    <p><h1 class="modal-title text-center p-3 bg-light text-dark" id="namePoke"></h1></p>
+                                    <img src="" alt="" id="imgPoke" width="260" height="260" style="filter: drop-shadow(5px 5px 5px #222);" />
+                                </div>
+                                <div class="col-sm-4 text-right">
+                                    <div class="card" id="cl3">
+                                        <label class="text-center mt-3">Details</label>
+                                        <div class="text-left ml-3">
+                                            <p>
+                                                <label>Species : </label>
+                                                <label id="species"></label>
+                                            </p>
+                                            <p>
+                                                <label>Ability : </label>
+                                                <label id="ability1"></label>
+                                                <label id="">, </label>
+                                                <label id="ability2"></label>
+                                            </p>
+                                        </div>
+                                        <label class="text-center mt-3">Move</label>
+                                        <div class="text-left ml-3">
+                                            <ul>
+                                                <li id="mv0"></li>
+                                                <li id="mv1"></li>
+                                                <li id="mv2"></li>
+                                                <li id="mv3"></li>
+                                                <li id="mv4"></li>
+                                                <li id="mv5"></li>
+                                                <li id="mv6"></li>
+                                                <li id="mv7"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @*<div class="row">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+            </div>
+        </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+</body>
+</html>

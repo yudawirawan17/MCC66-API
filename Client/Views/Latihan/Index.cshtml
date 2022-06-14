@@ -1,0 +1,147 @@
+﻿
+@{
+    Layout = null;
+    Layout = "_LayoutLatihan";  
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Latihan Yuda</title>
+</head>
+<body>
+
+    <div class="col-sm-12 mt-5">
+
+        <div class="card c11" id="c1">
+            <h1 class="m-3 text-center" id="jd">Judul HTML</h1>
+        </div>
+
+        <input type="button" value="center" id="btn1" class="btn btn-info offset-5 mt-3 mb-3" style="width: 240px;"/>
+
+        
+
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="text-justify">
+                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                    Placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante.
+                    Sem nulla eu ultricies orci praesent id augue nec lorem pretium congue sit amet ac nunc fusce iaculis lorem eu diam hendrerit at mattis purus dignissim vivamus mauris tellus, fringilla.
+                    Vel dapibus a, blandit quis erat vivamus elementum aliquam luctus etiam fringilla pretium sem vitae sodales mauris id nulla est praesent laoreet, metus vel auctor aliquam, eros purus vulputate leo.
+                </p>
+                <p class="text-justify">
+                    Eget consequat neque quam id tellus duis ultricies tempor tortor, vitae dignissim ligula mattis nec in hac habitasse platea dictumst ut arcu enim, dictum quis ultrices id, sagittis eget nulla.
+                    Sed nunc mi, congue ut ultricies ac, varius a eros donec porttitor, libero fermentum fringilla laoreet, eros arcu sodales ante, ut dictum risus lectus vel quam integer ultricies, nunc eget.
+                    Elementum euismod, orci enim vestibulum orci, nec suscipit urna odio et tellus suspendisse suscipit orci sit amet sem venenatis nec lobortis sem suscipit nullam nec imperdiet velit mauris eu nisi.
+                    Sem ornare sit amet proin sem sapien, auctor vel faucibus id, aliquet vitae ipsum etiam auctor ultricies ante, at dapibus urna viverra sed nullam mi arcu, tempor vitae interdum a.
+                </p>
+                <p class="text-justify">
+                    Sed nunc mi, congue ut ultricies ac, varius a eros donec porttitor, libero fermentum fringilla laoreet, eros arcu sodales ante, ut dictum risus lectus vel quam integer ultricies, nunc eget.
+                    A felis imperdiet porta at ac nulla vivamus faucibus felis nec dolor pretium eget pellentesque dolor suscipit maecenas vitae enim arcu, at tincidunt nunc pellentesque eleifend vulputate lacus, vel semper.
+                    Sem ornare sit amet proin sem sapien, auctor vel faucibus id, aliquet vitae ipsum etiam auctor ultricies ante, at dapibus urna viverra sed nullam mi arcu, tempor vitae interdum a.
+                </p>
+                <button onclick="myFunctionLine()" class="btn btn-light border">Find Key</button>
+            </div>
+            <div class="col-sm-6">
+                <div>
+                    <p class=" col-sm-12 text-justify">
+                        Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                        Placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante.
+                        Fusce non varius purus aenean nec magna felis fusce vestibulum velit mollis odio sollicitudin lacinia aliquam posuere, sapien elementum lobortis tincidunt, turpis dui ornare nisl, sollicitudin interdum turpis nunc eget.
+                        Sem nulla eu ultricies orci praesent id augue nec lorem pretium congue sit amet ac nunc fusce iaculis lorem eu diam hendrerit at mattis purus dignissim vivamus mauris tellus, fringilla.
+                        Vel dapibus a, blandit quis erat vivamus elementum aliquam luctus etiam fringilla pretium sem vitae sodales mauris id nulla est praesent laoreet, metus vel auctor aliquam, eros purus vulputate leo.
+                    </p>
+                </div>
+                <div class="ttm mt-4">
+                    <p class="text-center">Red VS Blue</p>
+                    <div class="frtm">
+                        <p>Puan</p>
+                        <p>Megawati</p>
+                        <p>Jokowi</p>
+                        <p>______________________________</p>
+                    </div>
+                    <div class="fbtm">
+                        <p>SBY</p>
+                        <p>AHY</p>
+                        <p>UNO</p>
+                        <p>______________________________</p>
+                    </div>
+                    <div class="rtm" id="btnCTeam">
+                        <p>Yuda</p>
+                    </div>
+                    <div class="tombol">
+                        <button onclick="myFunction()" class="btn btn-success tombol" value="Red" id="btnct">Chage Team</button>
+                        @*<button class="btn btn-info" id="btnct" value="Red">Chage Team</button>*@
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+        //pindah posisi judul
+        document.getElementById("jd").innerHTML = "Judul JS";
+        const btn = document.getElementById("btn1");
+        btn.addEventListener("click", () => {
+            if (btn.value == "center") {
+                btn.value = "right";
+                //btn.innerHTML = "Move to left";
+                document.getElementById("jd").className="text-right m-3";
+            }
+            else if (btn.value == "right"){
+                btn.value = "left";
+                //btn.innerHTML = "Move to center";
+                document.getElementById("jd").className="text-left m-3";
+            }
+            else {
+                btn.value = "center";
+                //btn.innerHTML = "Move to right";
+                document.getElementById("jd").className="text-center m-3";
+            }
+        })
+
+        const car = document.getElementById("c1");
+        car.addEventListener("click", () => {
+            if (car.className == "card c11") {
+                car.className = "card c12";
+                car.style.backgroundColor="red";
+            }
+            else if (car.className == "card c12") {
+                car.className = "card c13";
+                car.style.backgroundColor="blue";
+            }
+            else {
+                car.className = "card c11";
+                car.style.backgroundColor="green";
+            }
+        })
+
+        // pindah tim
+        function myFunction() {
+            const btnc = document.getElementById("btnct");
+            if (btnc.value == "Red") {
+                btnc.value = "Blue";
+                btnc.innerHTML = "Change to Red ";
+                btnc.className = "btn btn-primary";
+                document.getElementById("btnCTeam").className = "btm";
+            } else {
+                btnc.value = "Red";
+                btnc.innerHTML = "Change to Blue";
+                btnc.className = "btn btn-danger";
+                document.getElementById("btnCTeam").className = "rtm";
+            }
+        }
+
+        function myFunctionLine() {
+          var x = document.querySelector("div > p:nth-of-type(2)");
+          x.style.backgroundColor = "yellow";
+        }
+
+    </script>
+
+</body>
+</html>

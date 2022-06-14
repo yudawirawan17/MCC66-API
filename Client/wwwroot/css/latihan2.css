@@ -1,0 +1,21 @@
+﻿.modal-body {
+    background-image: url('../img/pokemon_bg_city1.jpg');
+}
+
+#cl1{
+    height:170px;
+}
+
+#cl2 {
+    height: 250px;
+}
+
+#cl3 {
+    height: 420px;
+    background-color: #ffffef;
+}
+
+#btn-com-info{
+    width: 140px;
+    height: 40px;
+}
